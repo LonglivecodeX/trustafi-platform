@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import CountUp from "@/components/CountUp";
 import { ChevronRight } from "lucide-react";
 
 const Index = () => (
