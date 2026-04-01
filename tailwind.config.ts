@@ -60,6 +60,10 @@ export default {
           DEFAULT: "hsl(var(--raw-gold))",
           light: "hsl(var(--raw-gold-light))",
         },
+        surface: {
+          DEFAULT: "hsl(var(--surface))",
+          elevated: "hsl(var(--surface-elevated))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
