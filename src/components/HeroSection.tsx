@@ -20,14 +20,14 @@ const HeroSection = () => {
         }}
       />
 
-      {/* Center strip */}
-      <div className="absolute bottom-0 left-0 right-0 bg-earth-deep/80 backdrop-blur-sm border-t border-gold/20 py-4 z-10">
+      {/* Center strip - positioned below content on mobile */}
+      <div className="absolute bottom-0 left-0 right-0 bg-earth-deep/80 backdrop-blur-sm border-t border-gold/20 py-4 z-20">
         <p className="text-center text-gold text-sm md:text-base font-medium tracking-wide px-4">
           Capital doesn't move on belief. It moves on verification.
         </p>
       </div>
 
-      <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-20 w-full">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-20 w-full pb-16">
         <div className="grid md:grid-cols-2 gap-12 md:gap-8 items-center min-h-[80vh]">
           {/* Left - Entrepreneur */}
           <div className="space-y-6 animate-fade-up">
