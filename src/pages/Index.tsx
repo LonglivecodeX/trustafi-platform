@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import CountUp from "@/components/CountUp";
 import { ChevronRight } from "lucide-react";
 
 const Index = () => (
@@ -57,18 +58,39 @@ const Index = () => (
       <div className="max-w-[1400px] mx-auto px-6 md:px-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { value: "12", label: "Verified Assets" },
-            { value: "₦2.4B", label: "Aggregate Revenue" },
-            { value: "68%", label: "Avg Utilization" },
-            { value: "Active", label: "Signal Layer" },
-          ].map(({ value, label }, i) => (
-            <ScrollReveal key={label} delay={i * 60} direction="none">
-              <div>
-                <span className="text-accent font-bold text-2xl md:text-3xl font-mono">{value}</span>
-                <p className="text-muted-foreground text-xs mt-1 font-medium">{label}</p>
+            { end: 12, prefix: "", suffix: "", label: "Verified Assets", decimals: 0 },
+            { end: 2.4, prefix: "₦", suffix: "B", label: "Aggregate Revenue", decimals: 1 },
+            { end: 68, prefix: "", suffix: "%", label: "Avg Utilization", decimals: 0 },
+            { end: 0, prefix: "", suffix: "", label: "Signal Layer", decimals: 0, isActive: true },
+          ].map((stat, i) => (
+            <ScrollReveal key={stat.label} delay={i * 60} direction="none">
+              <div className="group cursor-default p-4 -m-4 rounded-md border border-transparent transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_4px_20px_-4px_hsl(var(--accent)/0.15)]">
+                <span className="text-accent font-bold text-2xl md:text-3xl font-mono">
+                  {'isActive' in stat && stat.isActive ? (
+                    <span className="inline-flex items-center gap-2">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-active opacity-75" />
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-status-active" />
+                      </span>
+                      Active
+                    </span>
+                  ) : (
+                    <CountUp end={stat.end} prefix={stat.prefix} suffix={stat.suffix} decimals={stat.decimals} />
+                  )}
+                </span>
+                <p className="text-muted-foreground text-xs mt-1 font-medium">{stat.label}</p>
               </div>
             </ScrollReveal>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-10">
+          <Link
+            to="/engage"
+            className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-semibold px-8 py-3 rounded-md text-sm hover:brightness-110 transition-all"
+          >
+            Request Capital Access <ChevronRight size={14} />
+          </Link>
         </div>
       </div>
     </section>
