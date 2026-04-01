@@ -67,7 +67,7 @@ const Index = () => (
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="group cursor-default p-6 md:p-8 text-center transition-all duration-300 hover:shadow-[inset_0_0_20px_-4px_hsl(var(--accent)/0.12)] hover:bg-accent/[0.03]"
+                  className="group cursor-default p-6 md:p-8 text-center transition-all duration-300 hover:bg-primary-foreground/5"
                 >
                   <span className="text-accent font-bold text-[40px] md:text-[56px] leading-none font-mono block">
                     {'isActive' in stat && stat.isActive ? (
