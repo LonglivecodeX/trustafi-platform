@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center gradient-hero overflow-hidden pt-16 pb-20"
+      className="relative min-h-screen flex items-center gradient-hero overflow-hidden pt-20 pb-24"
     >
       {/* Background pattern */}
       <div
