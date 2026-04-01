@@ -57,8 +57,8 @@ const Index = () => (
     <section className="border-y border-border bg-primary text-primary-foreground py-14">
       <div className="max-w-[1400px] mx-auto px-6 md:px-16">
         <ScrollReveal>
-          <div className="border border-border rounded-lg overflow-hidden">
-            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border">
+          <div className="border border-primary-foreground/20 rounded-lg overflow-hidden">
+            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-primary-foreground/20">
               {[
                 { end: 12, prefix: "", suffix: "", label: "Verified Assets", context: "↑ +3 this quarter", decimals: 0 },
                 { end: 2.4, prefix: "₦", suffix: "B", label: "Aggregate Revenue", context: "↑ +18% YoY", decimals: 1 },
