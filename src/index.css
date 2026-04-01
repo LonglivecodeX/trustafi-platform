@@ -4,62 +4,62 @@
 
 @layer base {
   :root {
-    /* TrustAFI Institutional Design System */
-    --background: 160 50% 4%; /* near-black green */
-    --foreground: 40 20% 92%; /* warm off-white text */
+    /* TrustAFI Light Institutional Design System */
+    --background: 40 30% 96%; /* warm cream */
+    --foreground: 150 30% 12%; /* dark green text */
 
-    --card: 160 40% 7%;
-    --card-foreground: 40 20% 92%;
+    --card: 40 20% 99%; /* near-white cards */
+    --card-foreground: 150 30% 12%;
 
-    --popover: 160 40% 7%;
-    --popover-foreground: 40 20% 92%;
+    --popover: 40 20% 99%;
+    --popover-foreground: 150 30% 12%;
 
-    --primary: 160 65% 14%; /* earth green */
-    --primary-foreground: 40 37% 95%;
+    --primary: 150 30% 16%; /* deep green */
+    --primary-foreground: 40 30% 96%;
 
-    --secondary: 160 30% 10%;
-    --secondary-foreground: 40 20% 85%;
+    --secondary: 40 15% 92%;
+    --secondary-foreground: 150 20% 20%;
 
-    --muted: 160 20% 12%;
-    --muted-foreground: 40 10% 55%;
+    --muted: 40 10% 90%;
+    --muted-foreground: 150 10% 40%;
 
-    --accent: 43 60% 52%; /* raw gold */
-    --accent-foreground: 160 50% 4%;
+    --accent: 40 55% 54%; /* warm gold */
+    --accent-foreground: 150 30% 12%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 160 20% 14%;
-    --input: 160 20% 14%;
-    --ring: 43 60% 52%;
+    --border: 40 15% 85%;
+    --input: 40 15% 85%;
+    --ring: 40 55% 54%;
 
     --radius: 0.375rem;
     --status-active: 142 71% 45%;
 
     /* Custom TrustAFI tokens */
-    --earth-green: 160 65% 14%;
-    --earth-green-light: 160 40% 22%;
-    --raw-gold: 43 60% 52%;
-    --raw-gold-light: 43 50% 70%;
-    --off-white: 40 20% 92%;
-    --deep-dark: 160 50% 3%;
-    --surface: 160 30% 6%;
-    --surface-elevated: 160 25% 9%;
+    --earth-green: 150 30% 16%;
+    --earth-green-light: 150 20% 28%;
+    --raw-gold: 40 55% 54%;
+    --raw-gold-light: 40 45% 68%;
+    --off-white: 40 30% 96%;
+    --deep-dark: 150 30% 10%;
+    --surface: 40 20% 94%;
+    --surface-elevated: 40 15% 97%;
 
-    --gradient-hero: linear-gradient(180deg, hsl(160 50% 4%), hsl(160 50% 2%));
-    --gradient-gold: linear-gradient(135deg, hsl(43 60% 52%), hsl(43 50% 62%));
-    --shadow-card: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
-    --shadow-card-hover: 0 4px 16px -2px hsl(0 0% 0% / 0.4);
-    --shadow-gold: 0 0 24px -4px hsl(43 60% 52% / 0.15);
+    --gradient-hero: linear-gradient(180deg, hsl(40 30% 96%), hsl(40 20% 93%));
+    --gradient-gold: linear-gradient(135deg, hsl(40 55% 54%), hsl(40 45% 64%));
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.06);
+    --shadow-card-hover: 0 4px 16px -2px hsl(0 0% 0% / 0.1);
+    --shadow-gold: 0 0 24px -4px hsl(40 55% 54% / 0.2);
 
-    --sidebar-background: 160 30% 6%;
-    --sidebar-foreground: 40 20% 85%;
-    --sidebar-primary: 43 60% 52%;
-    --sidebar-primary-foreground: 160 50% 4%;
-    --sidebar-accent: 160 25% 9%;
-    --sidebar-accent-foreground: 40 20% 85%;
-    --sidebar-border: 160 20% 14%;
-    --sidebar-ring: 43 60% 52%;
+    --sidebar-background: 40 20% 94%;
+    --sidebar-foreground: 150 20% 30%;
+    --sidebar-primary: 40 55% 54%;
+    --sidebar-primary-foreground: 150 30% 12%;
+    --sidebar-accent: 40 15% 97%;
+    --sidebar-accent-foreground: 150 20% 30%;
+    --sidebar-border: 40 15% 85%;
+    --sidebar-ring: 40 55% 54%;
   }
 }
 
