@@ -82,8 +82,8 @@ const Index = () => (
                       <CountUp end={stat.end} prefix={stat.prefix} suffix={stat.suffix} decimals={stat.decimals} />
                     )}
                   </span>
-                  <p className="text-status-active/70 text-[11px] mt-2 font-medium">{stat.context}</p>
-                  <p className="text-muted-foreground text-[10px] mt-1.5 font-semibold uppercase tracking-[0.25em]">{stat.label}</p>
+                  <p className="text-primary-foreground/50 text-[11px] mt-2 font-medium">{stat.context}</p>
+                  <p className="text-primary-foreground/40 text-[10px] mt-1.5 font-semibold uppercase tracking-[0.25em]">{stat.label}</p>
                 </div>
               ))}
             </div>
