@@ -28,7 +28,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-20 w-full pb-16">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-8 items-center min-h-[80vh]">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-8 items-center md:min-h-[80vh] py-8 md:py-0">
           {/* Left - Entrepreneur */}
           <div className="space-y-6 animate-fade-up">
             <span className="inline-block text-gold/70 text-xs font-semibold uppercase tracking-[0.2em] border border-gold/20 px-3 py-1 rounded-full">
