@@ -3,13 +3,13 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Link } from "react-router-dom";
-import { Search, FileCheck, BarChart3, Target, ArrowRight } from "lucide-react";
+import { Search, FileCheck, BarChart3, Target, ChevronRight } from "lucide-react";
 
 const steps = [
-  { icon: Search, title: "Identification", desc: "We identify businesses with real operational activity, revenue, and growth indicators across key sectors." },
-  { icon: FileCheck, title: "Structuring", desc: "Raw business data is organized into a structured format — financial records, operations, governance, and capacity." },
-  { icon: BarChart3, title: "Verification", desc: "Every claim is verified through independent checks — financial audits, operational evidence, and field validation." },
-  { icon: Target, title: "Capital Positioning", desc: "Verified businesses are positioned with bankability scores (DRR, DQI, VIS) that investors can trust." },
+  { icon: Search, num: "01", title: "Identification", desc: "We identify businesses with real operational activity, revenue, and growth indicators across key sectors. No assumptions — only observable signal." },
+  { icon: FileCheck, num: "02", title: "Structuring", desc: "Raw business data is organized into a structured format — financial records, operations, governance, and capacity — creating a decision-readable asset profile." },
+  { icon: BarChart3, num: "03", title: "Verification", desc: "Every claim is verified through independent checks — financial audits, operational evidence, field validation. Only verified reality survives." },
+  { icon: Target, num: "04", title: "Capital Positioning", desc: "Verified businesses are positioned with institutional bankability scores (DRR, DQI, VIS) that capital allocators can trust and act on." },
 ];
 
 const AcquisitionPage = () => (
@@ -18,30 +18,29 @@ const AcquisitionPage = () => (
 
     <PageHero
       label="Acquisition"
-      title={<>How We Acquire &{" "}<span className="text-gold italic">Structure Assets</span></>}
-      subtitle="TrustAFI doesn't just list businesses. We identify, structure, verify, and position real assets for capital engagement — creating bankable opportunities from operational reality."
+      title={<>How We Acquire &{" "}<span className="text-accent italic">Structure Assets</span></>}
+      subtitle="TrustAFI doesn't list businesses. We identify, structure, verify, and position real assets for capital engagement — creating bankable opportunities from operational reality."
     />
 
-    <section className="bg-off-white py-20">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-20">
+    <section className="bg-background py-20">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-16">
         <ScrollReveal>
-          <div className="text-center mb-16">
-            <span className="text-gold text-xs font-semibold uppercase tracking-[0.25em]">The Process</span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">From Raw Asset to Capital-Ready Opportunity</h2>
+          <div className="flex items-center gap-2 mb-14">
+            <div className="w-8 h-px bg-accent" />
+            <span className="text-accent text-[11px] font-semibold uppercase tracking-[0.3em]">The Process</span>
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-px bg-border rounded-lg overflow-hidden">
           {steps.map((step, i) => (
-            <ScrollReveal key={step.title} delay={i * 120}>
-              <div className="bg-card rounded-xl border border-border p-8 shadow-card hover:shadow-card-hover transition-shadow">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-earth/10 flex items-center justify-center">
-                    <span className="text-earth font-bold text-sm">{i + 1}</span>
-                  </div>
-                  <h3 className="font-serif text-xl font-bold text-foreground">{step.title}</h3>
+            <ScrollReveal key={step.title} delay={i * 100}>
+              <div className="bg-card p-8 md:p-10 space-y-4 h-full group hover:bg-surface-elevated transition-colors">
+                <div className="flex items-center gap-3">
+                  <span className="text-accent/30 font-mono text-xs font-bold">{step.num}</span>
+                  <step.icon size={18} className="text-accent" />
                 </div>
-                <p className="text-muted-foreground leading-relaxed">{step.desc}</p>
+                <h3 className="font-serif text-xl font-bold text-foreground">{step.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{step.desc}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -49,16 +48,18 @@ const AcquisitionPage = () => (
       </div>
     </section>
 
-    <section className="bg-off-white py-20">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-20 text-center">
+    <section className="bg-background py-20 border-t border-border">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-16">
         <ScrollReveal>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">Ready to Structure Your Asset?</h2>
-          <p className="text-muted-foreground text-lg mt-4 max-w-xl mx-auto">
-            Submit your business for structuring and verification. Our team will assess your readiness and guide you through the process.
-          </p>
-          <Link to="/engage" className="inline-flex items-center gap-2 bg-gold text-foreground font-semibold px-8 py-3.5 rounded-md mt-8 hover:brightness-110 transition-all">
-            Submit for Verification <ArrowRight size={18} />
-          </Link>
+          <div className="max-w-2xl">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">Ready to Structure Your Asset?</h2>
+            <p className="text-muted-foreground text-base mt-4 leading-relaxed">
+              Submit your business for structuring and verification. Our team will assess your readiness and guide you through the process.
+            </p>
+            <Link to="/engage" className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-semibold px-7 py-3.5 rounded-md text-sm mt-8 hover:brightness-110 transition-all">
+              Submit for Verification <ChevronRight size={14} />
+            </Link>
+          </div>
         </ScrollReveal>
       </div>
     </section>
