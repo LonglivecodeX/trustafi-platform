@@ -69,7 +69,7 @@ const Index = () => (
                   key={stat.label}
                   className="group cursor-default p-6 md:p-8 text-center transition-all duration-300 hover:bg-primary-foreground/5"
                 >
-                  <span className="text-accent font-bold text-[40px] md:text-[56px] leading-none font-mono block">
+                  <span className="text-accent font-bold text-[40px] md:text-[56px] leading-none font-mono block text-primary-foreground">
                     {'isActive' in stat && stat.isActive ? (
                       <span className="inline-flex items-center gap-3">
                         <span className="relative flex h-3 w-3">
