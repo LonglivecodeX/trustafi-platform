@@ -54,7 +54,7 @@ const Index = () => (
     </section>
 
     {/* System Status */}
-    <section className="border-y border-border bg-card py-14">
+    <section className="border-y border-border bg-primary text-primary-foreground py-14">
       <div className="max-w-[1400px] mx-auto px-6 md:px-16">
         <ScrollReveal>
           <div className="border border-border rounded-lg overflow-hidden">
