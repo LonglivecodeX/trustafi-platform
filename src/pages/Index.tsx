@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import CountUp from "@/components/CountUp";
 import { ChevronRight } from "lucide-react";
+import heroSkyline from "@/assets/hero-skyline.jpg";
 
 const Index = () => (
   <div className="min-h-screen">
