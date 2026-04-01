@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import CountUp from "@/components/CountUp";
 import { ChevronRight } from "lucide-react";
+import heroSkyline from "@/assets/hero-skyline.jpg";
 
 const Index = () => (
   <div className="min-h-screen">
@@ -12,44 +13,60 @@ const Index = () => (
     {/* Signal Header */}
     <section className="relative gradient-hero">
       <div className="max-w-[1400px] mx-auto px-6 md:px-16 py-28 md:py-36">
-        <ScrollReveal>
-          <div className="flex items-center gap-2 mb-6">
-            <div className="w-1.5 h-1.5 rounded-full bg-status-active" />
-            <span className="text-muted-foreground text-[11px] font-mono tracking-[0.25em] uppercase">
-              Verification Layer Active
-            </span>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <ScrollReveal>
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-1.5 h-1.5 rounded-full bg-status-active" />
+                <span className="text-muted-foreground text-[11px] font-mono tracking-[0.25em] uppercase">
+                  Verification Layer Active
+                </span>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={100}>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.08] max-w-[780px]">
+                Capital moves on{" "}
+                <span className="text-accent">verified signal</span>.
+              </h1>
+            </ScrollReveal>
+
+            <ScrollReveal delay={200}>
+              <p className="text-muted-foreground text-base mt-6 max-w-[520px] leading-relaxed">
+                TrustAFI structures, verifies, and signals asset readiness — so capital deploys with certainty.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal delay={300}>
+              <div className="flex gap-3 mt-10">
+                <Link
+                  to="/engage"
+                  className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-semibold px-6 py-3 rounded-md text-sm hover:brightness-110 transition-all"
+                >
+                  Submit Asset <ChevronRight size={14} />
+                </Link>
+                <Link
+                  to="/engage"
+                  className="inline-flex items-center gap-2 border border-border text-foreground font-medium px-6 py-3 rounded-md text-sm hover:border-accent hover:text-accent transition-all"
+                >
+                  Investor Access
+                </Link>
+              </div>
+            </ScrollReveal>
           </div>
-        </ScrollReveal>
 
-        <ScrollReveal delay={100}>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.08] max-w-[780px]">
-            Capital moves on{" "}
-            <span className="text-accent">verified signal</span>.
-          </h1>
-        </ScrollReveal>
-
-        <ScrollReveal delay={200}>
-          <p className="text-muted-foreground text-base mt-6 max-w-[520px] leading-relaxed">
-            TrustAFI structures, verifies, and signals asset readiness — so capital deploys with certainty.
-          </p>
-        </ScrollReveal>
-
-        <ScrollReveal delay={300}>
-          <div className="flex gap-3 mt-10">
-            <Link
-              to="/engage"
-              className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-semibold px-6 py-3 rounded-md text-sm hover:brightness-110 transition-all"
-            >
-              Submit Asset <ChevronRight size={14} />
-            </Link>
-            <Link
-              to="/engage"
-              className="inline-flex items-center gap-2 border border-border text-foreground font-medium px-6 py-3 rounded-md text-sm hover:border-accent hover:text-accent transition-all"
-            >
-              Investor Access
-            </Link>
-          </div>
-        </ScrollReveal>
+          <ScrollReveal delay={200} direction="right">
+            <div className="hidden md:block rounded-lg overflow-hidden shadow-xl">
+              <img
+                src={heroSkyline}
+                alt="City skyline at golden hour"
+                width={800}
+                height={900}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </ScrollReveal>
+        </div>
       </div>
     </section>
 
