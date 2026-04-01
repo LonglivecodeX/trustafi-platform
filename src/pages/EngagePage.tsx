@@ -98,7 +98,7 @@ const EngagePage = () => {
 
                 <div className="mt-8 pt-6 border-t border-border">
                   <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-status-active" />
                     <span className="text-[11px] text-muted-foreground">Access is not automatic. All submissions are reviewed.</span>
                   </div>
                 </div>

@@ -30,7 +30,7 @@ const Index = () => (
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-16 py-28 md:py-40">
         <ScrollReveal>
           <div className="flex items-center gap-2 mb-8">
-            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <div className="w-1.5 h-1.5 rounded-full bg-status-active" />
             <span className="text-muted-foreground text-[11px] font-medium tracking-[0.3em] uppercase">
               Capital Governance Operating System
             </span>

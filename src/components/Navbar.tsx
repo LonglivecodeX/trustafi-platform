@@ -48,7 +48,7 @@ const Navbar = () => {
           </Link>
           <span className="w-px h-4 bg-border" />
           <div className="flex items-center gap-1.5">
-            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <div className="w-1.5 h-1.5 rounded-full bg-status-active" />
             <span className="text-[11px] text-muted-foreground font-medium tracking-wide">SYSTEM ACTIVE</span>
           </div>
         </div>
