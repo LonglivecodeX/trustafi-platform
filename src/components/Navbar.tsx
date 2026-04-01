@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { label: "The System", path: "/trustafi" },
+  { label: "System", path: "/trustafi" },
   { label: "Acquisition", path: "/acquisition" },
   { label: "Who We Serve", path: "/who-we-serve" },
 ];
@@ -23,15 +23,13 @@ const Navbar = () => {
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map(({ label, path }) => (
             <Link
               key={path}
               to={path}
-              className={`text-[13px] font-medium tracking-wide transition-colors duration-200 ${
-                location.pathname === path
-                  ? "text-accent"
-                  : "text-muted-foreground hover:text-foreground"
+              className={`text-[13px] font-medium tracking-wide transition-colors ${
+                location.pathname === path ? "text-accent" : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {label}
@@ -40,16 +38,13 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Link
-            to="/engage"
-            className="text-[13px] font-medium text-accent hover:text-foreground transition-colors"
-          >
+          <Link to="/engage" className="text-[13px] font-medium text-accent hover:text-foreground transition-colors">
             Request Access
           </Link>
           <span className="w-px h-4 bg-border" />
           <div className="flex items-center gap-1.5">
             <div className="w-1.5 h-1.5 rounded-full bg-status-active" />
-            <span className="text-[11px] text-muted-foreground font-medium tracking-wide">SYSTEM ACTIVE</span>
+            <span className="text-[11px] text-muted-foreground font-mono tracking-wide">ACTIVE</span>
           </div>
         </div>
 
@@ -61,20 +56,11 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden bg-background border-t border-border px-6 py-4 space-y-3">
           {navLinks.map(({ label, path }) => (
-            <Link
-              key={path}
-              to={path}
-              onClick={() => setOpen(false)}
-              className="block text-muted-foreground hover:text-accent text-sm py-2"
-            >
+            <Link key={path} to={path} onClick={() => setOpen(false)} className="block text-muted-foreground hover:text-accent text-sm py-2">
               {label}
             </Link>
           ))}
-          <Link
-            to="/engage"
-            onClick={() => setOpen(false)}
-            className="block w-full text-center border border-accent text-accent text-sm font-medium px-5 py-2.5 rounded-md hover:bg-accent hover:text-accent-foreground transition-all"
-          >
+          <Link to="/engage" onClick={() => setOpen(false)} className="block w-full text-center border border-accent text-accent text-sm font-medium px-5 py-2.5 rounded-md hover:bg-accent hover:text-accent-foreground transition-all">
             Request Access
           </Link>
         </div>
