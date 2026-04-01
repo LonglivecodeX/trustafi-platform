@@ -54,42 +54,54 @@ const Index = () => (
     </section>
 
     {/* System Status */}
-    <section className="border-y border-border bg-card py-10">
+    <section className="border-y border-border bg-card py-14">
       <div className="max-w-[1400px] mx-auto px-6 md:px-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { end: 12, prefix: "", suffix: "", label: "Verified Assets", decimals: 0 },
-            { end: 2.4, prefix: "₦", suffix: "B", label: "Aggregate Revenue", decimals: 1 },
-            { end: 68, prefix: "", suffix: "%", label: "Avg Utilization", decimals: 0 },
-            { end: 0, prefix: "", suffix: "", label: "Signal Layer", decimals: 0, isActive: true },
-          ].map((stat, i) => (
-            <ScrollReveal key={stat.label} delay={i * 60} direction="none">
-              <div className="group cursor-default p-4 -m-4 rounded-md border border-transparent transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_4px_20px_-4px_hsl(var(--accent)/0.15)]">
-                <span className="text-accent font-bold text-2xl md:text-3xl font-mono">
-                  {'isActive' in stat && stat.isActive ? (
-                    <span className="inline-flex items-center gap-2">
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-active opacity-75" />
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-status-active" />
+        <ScrollReveal>
+          <div className="border border-border rounded-lg overflow-hidden">
+            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border">
+              {[
+                { end: 12, prefix: "", suffix: "", label: "Verified Assets", context: "↑ +3 this quarter", decimals: 0 },
+                { end: 2.4, prefix: "₦", suffix: "B", label: "Aggregate Revenue", context: "↑ +18% YoY", decimals: 1 },
+                { end: 68, prefix: "", suffix: "%", label: "Avg Utilization", context: "↑ Above benchmark", decimals: 0 },
+                { end: 0, prefix: "", suffix: "", label: "Signal Layer", context: "● Live", decimals: 0, isActive: true },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  className="group cursor-default p-6 md:p-8 text-center transition-all duration-300 hover:shadow-[inset_0_0_20px_-4px_hsl(var(--accent)/0.12)] hover:bg-accent/[0.03]"
+                >
+                  <span className="text-accent font-bold text-[40px] md:text-[56px] leading-none font-mono block">
+                    {'isActive' in stat && stat.isActive ? (
+                      <span className="inline-flex items-center gap-3">
+                        <span className="relative flex h-3 w-3">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-active opacity-75" />
+                          <span className="relative inline-flex rounded-full h-3 w-3 bg-status-active" />
+                        </span>
+                        Active
                       </span>
-                      Active
-                    </span>
-                  ) : (
-                    <CountUp end={stat.end} prefix={stat.prefix} suffix={stat.suffix} decimals={stat.decimals} />
-                  )}
-                </span>
-                <p className="text-muted-foreground text-xs mt-1 font-medium">{stat.label}</p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
+                    ) : (
+                      <CountUp end={stat.end} prefix={stat.prefix} suffix={stat.suffix} decimals={stat.decimals} />
+                    )}
+                  </span>
+                  <p className="text-status-active/70 text-[11px] mt-2 font-medium">{stat.context}</p>
+                  <p className="text-muted-foreground text-[10px] mt-1.5 font-semibold uppercase tracking-[0.25em]">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
 
-        <div className="flex justify-center mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           <Link
             to="/engage"
-            className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-semibold px-8 py-3 rounded-md text-sm hover:brightness-110 transition-all"
+            className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-semibold px-8 py-4 rounded-md text-lg hover:brightness-110 transition-all"
           >
-            Request Capital Access <ChevronRight size={14} />
+            Submit Asset <ChevronRight size={18} />
+          </Link>
+          <Link
+            to="/engage"
+            className="inline-flex items-center justify-center gap-2 border border-accent text-accent font-semibold px-8 py-4 rounded-md text-lg hover:bg-accent/10 transition-all"
+          >
+            Investor Access
           </Link>
         </div>
       </div>
