@@ -4,59 +4,61 @@
 
 @layer base {
   :root {
-    /* TrustAFI Design System */
-    --background: 40 37% 95%; /* #F7F5F0 off-white */
-    --foreground: 0 0% 10%; /* #1A1A1A dark text */
+    /* TrustAFI Institutional Design System */
+    --background: 160 50% 4%; /* near-black green */
+    --foreground: 40 20% 92%; /* warm off-white text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card: 160 40% 7%;
+    --card-foreground: 40 20% 92%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 160 40% 7%;
+    --popover-foreground: 40 20% 92%;
 
-    --primary: 160 65% 14%; /* #0B3D2E earth green */
+    --primary: 160 65% 14%; /* earth green */
     --primary-foreground: 40 37% 95%;
 
-    --secondary: 40 37% 95%; /* off-white */
-    --secondary-foreground: 160 65% 14%;
+    --secondary: 160 30% 10%;
+    --secondary-foreground: 40 20% 85%;
 
-    --muted: 40 20% 90%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 160 20% 12%;
+    --muted-foreground: 40 10% 55%;
 
-    --accent: 43 60% 52%; /* #CFAF3D raw gold */
-    --accent-foreground: 0 0% 10%;
+    --accent: 43 60% 52%; /* raw gold */
+    --accent-foreground: 160 50% 4%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 20% 85%;
-    --input: 40 20% 85%;
+    --border: 160 20% 14%;
+    --input: 160 20% 14%;
     --ring: 43 60% 52%;
 
-    --radius: 0.5rem;
+    --radius: 0.375rem;
 
     /* Custom TrustAFI tokens */
     --earth-green: 160 65% 14%;
     --earth-green-light: 160 40% 22%;
     --raw-gold: 43 60% 52%;
     --raw-gold-light: 43 50% 70%;
-    --off-white: 40 37% 95%;
-    --deep-dark: 160 50% 6%;
+    --off-white: 40 20% 92%;
+    --deep-dark: 160 50% 3%;
+    --surface: 160 30% 6%;
+    --surface-elevated: 160 25% 9%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(160 65% 14%), hsl(160 50% 6%));
+    --gradient-hero: linear-gradient(180deg, hsl(160 50% 4%), hsl(160 50% 2%));
     --gradient-gold: linear-gradient(135deg, hsl(43 60% 52%), hsl(43 50% 62%));
-    --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.08);
-    --shadow-card-hover: 0 8px 32px -4px hsl(0 0% 0% / 0.14);
-    --shadow-gold: 0 4px 20px -4px hsl(43 60% 52% / 0.3);
+    --shadow-card: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-card-hover: 0 4px 16px -2px hsl(0 0% 0% / 0.4);
+    --shadow-gold: 0 0 24px -4px hsl(43 60% 52% / 0.15);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 160 30% 6%;
+    --sidebar-foreground: 40 20% 85%;
+    --sidebar-primary: 43 60% 52%;
+    --sidebar-primary-foreground: 160 50% 4%;
+    --sidebar-accent: 160 25% 9%;
+    --sidebar-accent-foreground: 40 20% 85%;
+    --sidebar-border: 160 20% 14%;
+    --sidebar-ring: 43 60% 52%;
   }
 }
 
@@ -85,6 +87,12 @@
   }
   .bg-off-white {
     background-color: hsl(var(--off-white));
+  }
+  .bg-surface {
+    background-color: hsl(var(--surface));
+  }
+  .bg-surface-elevated {
+    background-color: hsl(var(--surface-elevated));
   }
   .border-gold {
     border-color: hsl(var(--raw-gold));
@@ -116,12 +124,16 @@
   to { opacity: 1; }
 }
 @keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 0 0 0 hsl(43 60% 52% / 0.4); }
-  50% { box-shadow: 0 0 0 12px hsl(43 60% 52% / 0); }
+  0%, 100% { box-shadow: 0 0 0 0 hsl(43 60% 52% / 0.2); }
+  50% { box-shadow: 0 0 0 8px hsl(43 60% 52% / 0); }
 }
 @keyframes slide-in-right {
   from { opacity: 0; transform: translateX(32px); }
   to { opacity: 1; transform: translateX(0); }
+}
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .animate-fade-up {
@@ -131,10 +143,13 @@
   animation: fade-in 0.6s ease-out both;
 }
 .animate-pulse-gold {
-  animation: pulse-gold 2s ease-in-out infinite;
+  animation: pulse-gold 2.5s ease-in-out infinite;
 }
 .animate-slide-in-right {
   animation: slide-in-right 0.6s ease-out both;
+}
+.animate-ticker {
+  animation: ticker-scroll 30s linear infinite;
 }
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
