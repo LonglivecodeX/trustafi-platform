@@ -1,16 +1,13 @@
 import { Link } from "react-router-dom";
+import trustAFILogo from "@/assets/trustafi-logo.png";
 
 const Footer = () => (
   <footer className="bg-background border-t border-border py-8">
     <div className="max-w-[1400px] mx-auto px-6 md:px-16">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div className="flex items-center gap-1.5">
-          <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-          <span className="font-sans text-sm font-bold tracking-wider uppercase">
-            <span className="text-foreground">Trust</span>
-            <span className="text-gold">AFI</span>
-          </span>
-          <span className="text-muted-foreground/50 text-[11px] ml-2">AFI Continental Resources Limited</span>
+        <div className="flex items-center gap-3">
+          <img src={trustAFILogo} alt="TrustAFI" className="h-10 w-auto" />
+          <span className="text-muted-foreground/50 text-[11px]">AFI Continental Resources Limited</span>
         </div>
 
         <div className="flex flex-wrap gap-x-6 gap-y-2">
