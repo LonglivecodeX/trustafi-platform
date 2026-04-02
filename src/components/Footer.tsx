@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Facebook } from "lucide-react";
-import trustAFILogo from "@/assets/TrustAFI_updated_logo.jpeg";
+import trustAFILogo from "@/assets/trustafi-logo-v2.png";
 
 const XIcon = ({ size = 16, className = "" }: { size?: number; className?: string }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
