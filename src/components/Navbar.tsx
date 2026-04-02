@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import trustAFILogo from "@/assets/trustafi-logo.jpeg";
+import trustAFILogo from "@/assets/trustafi-logo.png";
 
 const navLinks = [
   { label: "System", path: "/trustafi" },
