@@ -84,7 +84,7 @@ const Index = () => (
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="group cursor-default p-6 md:p-8 text-center transition-all duration-300 hover:bg-primary-foreground/5"
+                  className="group cursor-default p-6 md:p-8 text-center transition-all duration-300 hover:bg-primary-foreground/5 rounded-none"
                 >
                   <span className="text-accent font-bold text-[40px] md:text-[56px] leading-none font-mono block text-primary-foreground">
                     {'isActive' in stat && stat.isActive ? (
@@ -99,7 +99,7 @@ const Index = () => (
                       <CountUp end={stat.end} prefix={stat.prefix} suffix={stat.suffix} decimals={stat.decimals} />
                     )}
                   </span>
-                  <p className="text-[11px] mt-2 font-medium bg-destructive-foreground text-secondary">{stat.context}</p>
+                  <p className="text-[11px] mt-2 font-medium text-secondary bg-primary">{stat.context}</p>
                   <p className="text-primary-foreground/40 text-[10px] mt-1.5 font-semibold uppercase tracking-[0.25em]">{stat.label}</p>
                 </div>
               ))}
