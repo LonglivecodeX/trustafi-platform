@@ -7,9 +7,9 @@ import { ChevronRight } from "lucide-react";
 
 const steps = [
   { num: "01", title: "Identify", signal: "Observable revenue, operations, and growth indicators across key sectors." },
-  { num: "02", title: "Structure", signal: "Raw data organized into decision-readable asset profiles — financials, governance, capacity." },
-  { num: "03", title: "Verify", signal: "Independent audits and field validation. Only verified reality survives." },
-  { num: "04", title: "Position", signal: "Verified assets scored (DRR, DQI, VIS) and surfaced to qualified capital." },
+  { num: "02", title: "Qualify", signal: "All entries screened for eligibility before advancing to assessment." },
+  { num: "03", title: "Structure", signal: "Qualified data organized into decision-readable asset profiles — financials, governance, capacity." },
+  { num: "04", title: "Signal", signal: "Capital-ready assets scored (DRR, DQI, VIS) and surfaced to qualified allocators." },
 ];
 
 const AcquisitionPage = () => (
@@ -18,8 +18,8 @@ const AcquisitionPage = () => (
 
     <PageHero
       label="Acquisition"
-      title={<>Asset Structuring <span className="text-accent">Pipeline</span></>}
-      subtitle="Identification → Structuring → Verification → Capital positioning."
+      title={<>Asset Qualification <span className="text-accent">Pipeline</span></>}
+      subtitle="Identification → Qualification → Structuring → Capital readiness signaling."
     />
 
     <section className="bg-background py-16">
@@ -42,7 +42,7 @@ const AcquisitionPage = () => (
       <div className="max-w-[1400px] mx-auto px-6 md:px-16">
         <ScrollReveal>
           <Link to="/engage" className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-semibold px-6 py-3 rounded-md text-sm hover:brightness-110 transition-all">
-            Submit Asset for Structuring <ChevronRight size={14} />
+            Submit for Qualification <ChevronRight size={14} />
           </Link>
         </ScrollReveal>
       </div>
