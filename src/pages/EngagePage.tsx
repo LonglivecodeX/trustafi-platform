@@ -24,9 +24,9 @@ const EngagePage = () => {
       <Navbar />
 
       <PageHero
-        label="Request Access"
-        title={<>Enter the Verification <span className="text-accent">Layer</span></>}
-        subtitle="Submit for verification or request investor access. All submissions are reviewed."
+        label="Start Qualification"
+        title={<>Enter the TrustAFI Process for <span className="text-accent">Structured Capital Readiness</span></>}
+        subtitle="Submit for qualification. All entries are screened before proceeding to verification and capital review."
       />
 
       <section className="bg-background py-16">
@@ -135,7 +135,7 @@ const EngagePage = () => {
                 )}
 
                 <button type="submit" className="w-full bg-accent text-accent-foreground font-semibold py-3 rounded-md text-sm hover:brightness-110 transition-all">
-                  {tab === "asset" ? "Submit for Verification" : "Apply for Access"}
+                  {tab === "asset" ? "Submit for Qualification" : "Apply for Access"}
                 </button>
               </form>
             </ScrollReveal>
@@ -145,10 +145,10 @@ const EngagePage = () => {
                 <span className="text-accent text-[11px] font-semibold uppercase tracking-[0.2em]">Process</span>
                 <div className="space-y-4 mt-5">
                   {[
-                    "Submit application",
-                    "Review within 48 hours",
-                    tab === "asset" ? "Bankability assessment" : "Profile verification",
-                    tab === "asset" ? "Structuring roadmap issued" : "Pipeline access granted",
+                    "Submit for qualification",
+                    "Screening within 48 hours",
+                    tab === "asset" ? "Bankability intelligence assessment" : "Profile review",
+                    tab === "asset" ? "Structuring and capital readiness signaling" : "Pipeline access granted",
                   ].map((step, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <span className="w-5 h-5 rounded bg-accent/10 flex items-center justify-center shrink-0 text-accent text-[10px] font-bold font-mono">
@@ -161,7 +161,7 @@ const EngagePage = () => {
                 <div className="mt-6 pt-4 border-t border-border">
                   <div className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-status-active" />
-                    <span className="text-[11px] text-muted-foreground">All submissions reviewed. Access is not automatic.</span>
+                    <span className="text-[11px] text-muted-foreground">All entries are screened. Access is not automatic.</span>
                   </div>
                 </div>
               </div>

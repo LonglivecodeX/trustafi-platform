@@ -6,11 +6,10 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 const stages = [
-  { num: "01", title: "Data Structuring", signal: "Unstructured business data → decision-readable format across financial, operational, and governance dimensions." },
-  { num: "02", title: "Independent Verification", signal: "Financial audits, operational evidence, and field checks validate every claim. No assumptions survive." },
-  { num: "03", title: "Bankability Scoring", signal: "Assets receive institutional scores: Decision Readiness Rating (DRR), Data Quality Index (DQI), Verification Integrity Score (VIS)." },
-  { num: "04", title: "Signal Emission", signal: "Verified assets surface to qualified capital allocators with structured, machine-readable metrics." },
-  { num: "05", title: "Capital Engagement", signal: "Capital deploys into verified assets. Precision replaces speculation." },
+  { num: "01", title: "Qualification", signal: "All entries are screened. Only structured, eligible assets proceed to the next stage." },
+  { num: "02", title: "Bankability Intelligence Assessment", signal: "Deep evaluation across financial, operational, and governance dimensions. Assets receive institutional scores: DRR, DQI, VIS." },
+  { num: "03", title: "Structuring", signal: "Qualified data organized into decision-readable asset profiles — financials, governance, capacity." },
+  { num: "04", title: "Capital Readiness Signaling", signal: "Capital-ready assets surface to qualified allocators with structured, decision-grade metrics." },
 ];
 
 const TrustAFIPage = () => (
@@ -19,8 +18,8 @@ const TrustAFIPage = () => (
 
     <PageHero
       label="The System"
-      title={<>Verification Infrastructure for <span className="text-accent">Capital Certainty</span></>}
-      subtitle="Five stages. Every claim verified. Only confirmed reality reaches capital."
+      title={<>Qualification Infrastructure for <span className="text-accent">Capital Certainty</span></>}
+      subtitle="Four stages. Every claim qualified. Only confirmed reality reaches capital."
     />
 
     {/* Process */}
@@ -55,7 +54,7 @@ const TrustAFIPage = () => (
         <ScrollReveal>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link to="/engage" className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-semibold px-6 py-3 rounded-md text-sm hover:brightness-110 transition-all">
-              Submit Asset for Verification <ChevronRight size={14} />
+              Submit for Qualification <ChevronRight size={14} />
             </Link>
             <Link to="/engage" className="inline-flex items-center gap-2 border border-border text-foreground font-medium px-6 py-3 rounded-md text-sm hover:border-accent hover:text-accent transition-all">
               Request Investor Access

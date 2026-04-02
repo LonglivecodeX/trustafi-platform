@@ -19,7 +19,7 @@ const Index = () => (
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-1.5 h-1.5 rounded-full bg-status-active" />
                 <span className="text-muted-foreground text-[11px] font-mono tracking-[0.25em] uppercase">
-                  Verification Layer Active
+                  Qualification Layer Active
                 </span>
               </div>
             </ScrollReveal>
@@ -27,13 +27,13 @@ const Index = () => (
             <ScrollReveal delay={100}>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.08] max-w-[780px]">
                 Capital moves on{" "}
-                <span className="text-accent">verified signal</span>.
+                <span className="text-accent">qualified signal</span>.
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
               <p className="text-muted-foreground text-base mt-6 max-w-[520px] leading-relaxed">
-                TrustAFI structures, verifies, and signals asset readiness — so capital deploys with certainty.
+                TrustAFI qualifies, structures, and signals asset readiness — so capital deploys with certainty.
               </p>
             </ScrollReveal>
 
@@ -43,7 +43,7 @@ const Index = () => (
                   to="/engage"
                   className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-semibold px-6 py-3 rounded-md text-sm hover:brightness-110 transition-all"
                 >
-                  Submit Asset <ChevronRight size={14} />
+                  Start Qualification <ChevronRight size={14} />
                 </Link>
                 <Link
                   to="/engage"
@@ -77,7 +77,7 @@ const Index = () => (
           <div className="border border-primary-foreground/20 rounded-lg overflow-hidden">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-primary-foreground/20">
               {[
-                { end: 12, prefix: "", suffix: "", label: "Verified Assets", context: "↑ +3 this quarter", decimals: 0 },
+                { end: 12, prefix: "", suffix: "", label: "Qualified Assets", context: "↑ +3 this quarter", decimals: 0 },
                 { end: 2.4, prefix: "₦", suffix: "B", label: "Aggregate Revenue", context: "↑ +18% YoY", decimals: 1 },
                 { end: 68, prefix: "", suffix: "%", label: "Avg Utilization", context: "↑ Above benchmark", decimals: 0 },
                 { end: 0, prefix: "", suffix: "", label: "Signal Layer", context: "● Live", decimals: 0, isActive: true },
@@ -112,7 +112,7 @@ const Index = () => (
             to="/engage"
             className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-semibold px-8 py-4 rounded-md text-lg hover:brightness-110 transition-all"
           >
-            Submit Asset <ChevronRight size={18} />
+            Submit for Qualification <ChevronRight size={18} />
           </Link>
           <Link
             to="/engage"
@@ -124,7 +124,7 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Verification Process — 3 stages only */}
+    {/* Process — 4 stages */}
     <section className="bg-background py-16">
       <div className="max-w-[1400px] mx-auto px-6 md:px-16">
         <ScrollReveal>
@@ -134,11 +134,12 @@ const Index = () => (
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-px bg-border rounded-lg overflow-hidden">
+        <div className="grid md:grid-cols-4 gap-px bg-border rounded-lg overflow-hidden">
           {[
-            { num: "01", title: "Structure", signal: "Raw data → decision-readable format" },
-            { num: "02", title: "Verify", signal: "Independent checks confirm every claim" },
-            { num: "03", title: "Signal", signal: "Verified assets surface to qualified capital" },
+            { num: "01", title: "Qualification", signal: "All entries screened before proceeding to review" },
+            { num: "02", title: "Bankability Assessment", signal: "Intelligence-driven evaluation of capital readiness" },
+            { num: "03", title: "Structuring", signal: "Data organized into decision-readable format" },
+            { num: "04", title: "Capital Signaling", signal: "Qualified assets surface to capital allocators" },
           ].map((step, i) => (
             <ScrollReveal key={step.title} delay={i * 80} direction="none">
               <div className="bg-card p-8 h-full">
@@ -160,13 +161,13 @@ const Index = () => (
             <div className="bg-card p-8 md:p-10 h-full">
               <span className="text-muted-foreground text-[11px] font-semibold uppercase tracking-[0.2em]">Asset Owners</span>
               <h2 className="font-serif text-2xl font-bold text-foreground mt-3">
-                Get verified. Get capital-ready.
+                Start qualification. Get capital-ready.
               </h2>
               <p className="text-muted-foreground text-sm mt-3 leading-relaxed">
-                Submit data. Receive structured verification. Surface to investors.
+                Submit for qualification. All entries are screened before proceeding to capital review.
               </p>
               <Link to="/engage" className="inline-flex items-center gap-2 text-accent text-sm font-medium mt-5 hover:gap-3 transition-all">
-                Submit Asset <ChevronRight size={14} />
+                Submit for Qualification <ChevronRight size={14} />
               </Link>
             </div>
           </ScrollReveal>
@@ -175,10 +176,10 @@ const Index = () => (
             <div className="bg-card p-8 md:p-10 h-full">
               <span className="text-muted-foreground text-[11px] font-semibold uppercase tracking-[0.2em]">Investors</span>
               <h2 className="font-serif text-2xl font-bold text-foreground mt-3">
-                Access verified pipeline only.
+                Access qualified pipeline only.
               </h2>
               <p className="text-muted-foreground text-sm mt-3 leading-relaxed">
-                Structured assets. Verified data. Decision-ready metrics.
+                Structured assets. Qualified data. Decision-ready metrics.
               </p>
               <Link to="/engage" className="inline-flex items-center gap-2 text-accent text-sm font-medium mt-5 hover:gap-3 transition-all">
                 Request Access <ChevronRight size={14} />
