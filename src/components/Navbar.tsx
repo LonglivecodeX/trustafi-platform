@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
       <div className="max-w-[1400px] mx-auto px-6 md:px-16 flex items-center justify-between h-14">
         <Link to="/" className="flex items-center">
-          <img src={trustAFILogo} alt="TrustAFI" className="h-12 w-auto" />
+          <img src={trustAFILogo} alt="TrustAFI" className="h-14 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">

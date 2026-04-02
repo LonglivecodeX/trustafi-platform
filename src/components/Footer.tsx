@@ -6,7 +6,7 @@ const Footer = () => (
     <div className="max-w-[1400px] mx-auto px-6 md:px-16">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <img src={trustAFILogo} alt="TrustAFI" className="h-12 w-auto" />
+          <img src={trustAFILogo} alt="TrustAFI" className="h-14 w-auto" />
           <span className="text-muted-foreground/50 text-[11px]">AFI Continental Resources Limited</span>
         </div>
 
