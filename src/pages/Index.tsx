@@ -99,7 +99,7 @@ const Index = () => (
                       <CountUp end={stat.end} prefix={stat.prefix} suffix={stat.suffix} decimals={stat.decimals} />
                     )}
                   </span>
-                  <p className="text-[11px] mt-2 font-medium bg-destructive-foreground text-secondary px-2 py-0.5 rounded-full inline-block">{stat.context}</p>
+                  <p className="text-[11px] mt-2 font-medium bg-destructive-foreground text-secondary">{stat.context}</p>
                   <p className="text-primary-foreground/40 text-[10px] mt-1.5 font-semibold uppercase tracking-[0.25em]">{stat.label}</p>
                 </div>
               ))}
