@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import trustAFILogo from "@/assets/trustafi-logo.jpeg";
 
 const navLinks = [
   { label: "System", path: "/trustafi" },
@@ -15,12 +16,8 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border">
       <div className="max-w-[1400px] mx-auto px-6 md:px-16 flex items-center justify-between h-14">
-        <Link to="/" className="flex items-center gap-1.5">
-          <div className="w-2 h-2 rounded-full bg-accent animate-pulse-gold" />
-          <span className="font-sans text-sm font-bold tracking-wider uppercase">
-            <span className="text-foreground">Trust</span>
-            <span className="text-gold">AFI</span>
-          </span>
+        <Link to="/" className="flex items-center">
+          <img src={trustAFILogo} alt="TrustAFI" className="h-8 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
