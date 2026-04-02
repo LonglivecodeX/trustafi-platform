@@ -43,10 +43,10 @@ const Footer = () => (
             info@afi.africa
           </a>
           <a
-            href="tel:+2340000000000"
+            href="tel:+2348119479657"
             className="text-[12px] text-muted-foreground hover:text-foreground transition-colors"
           >
-            +234 000 000 0000
+            +234 811 947 9657
           </a>
         </div>
 
