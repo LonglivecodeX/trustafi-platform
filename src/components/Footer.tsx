@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import trustAFILogo from "@/assets/trustafi-logo.png";
+import trustAFILogo from "@/assets/trustafi-logo-v2.png";
 
 const Footer = () => (
   <footer className="bg-background border-t border-border py-8">
