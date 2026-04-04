@@ -7,9 +7,10 @@ import { ChevronRight } from "lucide-react";
 
 const stages = [
   { num: "01", title: "Qualification", signal: "All entries are screened. Only structured, eligible assets proceed to the next stage." },
-  { num: "02", title: "Bankability Intelligence Assessment", signal: "Deep evaluation across financial, operational, and governance dimensions. Assets receive institutional scores: DRR, DQI, VIS." },
-  { num: "03", title: "Structuring", signal: "Qualified data organized into decision-readable asset profiles — financials, governance, capacity." },
-  { num: "04", title: "Capital Readiness Signaling", signal: "Capital-ready assets surface to qualified allocators with structured, decision-grade metrics." },
+  { num: "02", title: "Verification", signal: "Every claim tested against independent evidence" },
+  { num: "03", title: "Bankability Intelligence Assessment", signal: "Deep evaluation across financial, operational, and governance dimensions. Assets receive institutional scores: DRR, DQI, VIS." },
+  { num: "04", title: "Structuring", signal: "Qualified data organized into decision-readable asset profiles — financials, governance, capacity." },
+  { num: "05", title: "Capital Readiness Signaling", signal: "Capital-ready assets surface to qualified allocators with structured, decision-grade metrics." },
 ];
 
 const TrustAFIPage = () => (
