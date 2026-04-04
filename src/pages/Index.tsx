@@ -84,11 +84,11 @@ const Index = () => (
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="group cursor-default p-6 md:p-8 text-center transition-all duration-300 hover:bg-primary-foreground/5 rounded-none"
+                  className="group cursor-default p-6 md:p-8 transition-all duration-300 hover:bg-primary-foreground/5 rounded-none text-left"
                 >
                   <span className="text-accent font-bold text-[40px] md:text-[56px] leading-none font-mono block text-primary-foreground">
                     {'isActive' in stat && stat.isActive ? (
-                      <span className="inline-flex items-center gap-3">
+                      <span className="inline-flex items-center gap-3 text-4xl">
                         <span className="relative flex h-3 w-3">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-active opacity-75" />
                           <span className="relative inline-flex rounded-full h-3 w-3 bg-status-active" />
