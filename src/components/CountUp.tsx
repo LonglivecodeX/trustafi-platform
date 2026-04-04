@@ -43,7 +43,7 @@ const CountUp = ({ end, prefix = "", suffix = "", duration = 2000, decimals = 0 
   const display = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
 
   return (
-    <span ref={ref} className="font-sans text-left">
+    <span ref={ref} className="font-sans text-left text-4xl">
       {prefix}{display}{suffix}
     </span>
   );
