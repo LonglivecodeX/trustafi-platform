@@ -157,16 +157,17 @@ const Index = () => (
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-4 gap-px bg-border rounded-lg overflow-hidden">
+        <div className="grid md:grid-cols-5 gap-px bg-border rounded-lg overflow-hidden">
           {[
             { num: "01", title: "Qualification", signal: "All entries screened before proceeding to review" },
+            { num: "02", title: "Verification", signal: "Every claim tested against independent evidence" },
             {
-              num: "02",
+              num: "03",
               title: "Bankability Assessment",
               signal: "Intelligence-driven evaluation of capital readiness",
             },
-            { num: "03", title: "Structuring", signal: "Data organized into decision-readable format" },
-            { num: "04", title: "Capital Signaling", signal: "Qualified assets surface to capital allocators" },
+            { num: "04", title: "Structuring", signal: "Data organized into decision-readable format" },
+            { num: "05", title: "Capital Signaling", signal: "Qualified assets surface to capital allocators" },
           ].map((step, i) => (
             <ScrollReveal key={step.title} delay={i * 80} direction="none">
               <div className="bg-card p-8 h-full">
