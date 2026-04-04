@@ -209,7 +209,7 @@ const Index = () => (
               <span className="text-muted-foreground text-[11px] font-semibold uppercase tracking-[0.2em]">
                 Investors
               </span>
-              <h2 className="font-serif text-2xl font-bold text-foreground mt-3">Access qualified pipeline only.</h2>
+              <h2 className="font-serif text-2xl font-bold text-foreground mt-3">Access verified pipeline only.</h2>
               <p className="text-muted-foreground text-sm mt-3 leading-relaxed">
                 Structured assets. Qualified data. Decision-ready metrics.
               </p>
