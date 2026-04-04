@@ -190,7 +190,7 @@ const Index = () => (
                 Asset Owners
               </span>
               <h2 className="font-serif text-2xl font-bold text-foreground mt-3">
-                Start qualification. Get capital-ready.
+                Start verification. Get capital-ready.
               </h2>
               <p className="text-muted-foreground text-sm mt-3 leading-relaxed">
                 Submit for qualification. All entries are screened before proceeding to capital review.
