@@ -20,7 +20,7 @@ const TrustAFIPage = () => (
     <PageHero
       label="The System"
       title={<>Qualification Infrastructure for <span className="text-accent">Capital Certainty</span></>}
-      subtitle="Four stages. Every claim qualified. Only confirmed reality reaches capital."
+      subtitle="Five stages. Every claim qualified. Only confirmed reality reaches capital."
     />
 
     {/* Process */}
