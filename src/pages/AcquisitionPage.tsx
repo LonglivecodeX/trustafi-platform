@@ -6,17 +6,17 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 const steps = [
-  { num: "01", title: "Identify", signal: "Observable revenue, operations, and growth indicators across key sectors." },
-  { num: "02", title: "Qualify", signal: "All entries screened for eligibility before advancing to assessment." },
+  { num: "01", title: "Qualify", signal: "All entries screened for eligibility before advancing to assessment." },
+  { num: "02", title: "Verify", signal: "Every claim tested against independent evidence before proceeding." },
   {
     num: "03",
     title: "Structure",
-    signal: "Qualified data organized into decision-readable asset profiles — financials, governance, capacity.",
+    signal: "Qualified data organised into decision-readable asset profiles — financials, governance, capacity.",
   },
   {
     num: "04",
     title: "Signal",
-    signal: "Capital-ready assets scored (DRR, DQI, VIS) and surfaced to qualified allocators.",
+    signal: "Capital-ready assets scored and surfaced to verified allocators.",
   },
 ];
 
