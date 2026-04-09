@@ -70,7 +70,7 @@ const EngagePage = () => {
 
       <PageHero
         label="Start Qualification"
-        title={<>Enter the TrustAFI Process for <span className="text-accent">Structured Capital Readiness</span></>}
+        title={<>Enter the TrustAFI Environment for <span className="text-accent">Structured Capital Readiness</span></>}
         subtitle="Submit for qualification. All entries are screened before proceeding to verification and capital review."
       />
 
