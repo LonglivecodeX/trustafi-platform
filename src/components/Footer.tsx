@@ -48,6 +48,11 @@ const Footer = () => (
           >
             +234 811 947 9657
           </a>
+          <span className="text-[12px] text-muted-foreground leading-relaxed mt-1">
+            6th Floor, Landmark Towers,<br />
+            5B Water Corporation Rd,<br />
+            Victoria Island, Lagos
+          </span>
         </div>
 
         {/* Right — Nav + Social */}
