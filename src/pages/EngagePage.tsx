@@ -162,11 +162,10 @@ const EngagePage = () => {
                         <label className={labelClass}>Annual Revenue</label>
                         <select name="annualRevenue" className={inputClass}>
                           <option value="">Select range</option>
-                          <option>Under ₦10M</option>
-                          <option>₦10M – ₦50M</option>
-                          <option>₦50M – ₦200M</option>
-                          <option>₦200M – ₦1B</option>
-                          <option>Above ₦1B</option>
+                          <option>₦100M – ₦500M</option>
+                          <option>₦500M – ₦1B</option>
+                          <option>₦1B – ₦5B</option>
+                          <option>Above ₦5B</option>
                         </select>
                       </div>
                     </div>
