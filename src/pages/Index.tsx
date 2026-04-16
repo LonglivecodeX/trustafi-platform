@@ -32,7 +32,7 @@ const Index = () => (
 
             <ScrollReveal delay={200}>
               <p className="text-muted-foreground text-base mt-6 max-w-[520px] leading-relaxed">
-                TrustAFI qualifies, verifies, structures and signals asset readiness so capital deploys with certainty.
+                Enter the TrustAFI Process for Structured Capital Clarity.
               </p>
             </ScrollReveal>
 
