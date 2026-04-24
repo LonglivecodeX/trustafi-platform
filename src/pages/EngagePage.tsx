@@ -139,8 +139,8 @@ const EngagePage = () => {
                 </div>
 
                 <div>
-                  <label className={labelClass}>LinkedIn Profile URL</label>
-                  <input type="url" name="linkedinUrl" className={inputClass} placeholder="https://linkedin.com/in/..." />
+                  <label className={labelClass}>LinkedIn Profile (username or URL)</label>
+                  <input type="text" name="linkedinUrl" className={inputClass} placeholder="username or https://linkedin.com/in/..." />
                 </div>
 
                 {/* Asset Owner specific fields */}
