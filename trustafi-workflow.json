@@ -1,0 +1,777 @@
+{
+  "name": "TrustAFI Intake Form",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "trustafi-intake",
+        "options": {}
+      },
+      "id": "7c872801-a746-4f99-862e-91727ca2a2dd",
+      "name": "Receive Form Data",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        240,
+        400
+      ],
+      "webhookId": "ea0c4ac9-3b24-4040-bd34-dfdf7685b139"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "mode": "id",
+          "value": "appP8fZ7mxfVlSkyN"
+        },
+        "table": {
+          "__rl": true,
+          "mode": "id",
+          "value": "tbl1P0lMnSTNrDGpI"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $json.body.fullName }}",
+            "SUB_IntakeType": "={{ $json.body.intakeType }}",
+            "SUB_Score": 0,
+            "SUB_Date": "={{ $now.toFormat('yyyy-MM-dd') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "SUB_Date",
+              "displayName": "SUB_Date",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "dateTime",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "SUB_IntakeType",
+              "displayName": "SUB_IntakeType",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Asset Owner",
+                  "value": "Asset Owner"
+                },
+                {
+                  "name": "Capital Allocator",
+                  "value": "Capital Allocator"
+                },
+                {
+                  "name": "",
+                  "value": ""
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "SUB_Stage",
+              "displayName": "SUB_Stage",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "New Intake",
+                  "value": "New Intake"
+                },
+                {
+                  "name": "Under Review",
+                  "value": "Under Review"
+                },
+                {
+                  "name": "Needs Evidence",
+                  "value": "Needs Evidence"
+                },
+                {
+                  "name": "In Verification",
+                  "value": "In Verification"
+                },
+                {
+                  "name": "Qualified",
+                  "value": "Qualified"
+                },
+                {
+                  "name": "Rejected",
+                  "value": "Rejected"
+                },
+                {
+                  "name": "On Hold",
+                  "value": "On Hold"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "SUB_Reviewer",
+              "displayName": "SUB_Reviewer",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "SUB_Score",
+              "displayName": "SUB_Score",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "SUB_NextAction",
+              "displayName": "SUB_NextAction",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "SUB_Contact",
+              "displayName": "SUB_Contact",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "SUB_Organization",
+              "displayName": "SUB_Organization",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Capital_Allocator_Profile",
+              "displayName": "Capital_Allocator_Profile",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Asset_Owner_Profile",
+              "displayName": "Asset_Owner_Profile",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Evidence",
+              "displayName": "Evidence",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Workflow",
+              "displayName": "Workflow",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Communication_Log",
+              "displayName": "Communication_Log",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Signal_Notes",
+              "displayName": "Signal_Notes",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {
+          "typecast": true
+        }
+      },
+      "id": "14a74a4a-4f96-4a98-8bb4-3bacb9fc63e0",
+      "name": "Create Submission",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        464,
+        400
+      ],
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "oBf9Mi35QjkrgzTc",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "mode": "id",
+          "value": "appP8fZ7mxfVlSkyN"
+        },
+        "table": {
+          "__rl": true,
+          "mode": "id",
+          "value": "tblJNhGQPzsrs7n09"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $(\"Receive Form Data\").item.json.body.fullName }}",
+            "CNT_Email": "={{ $(\"Receive Form Data\").item.json.body.email }}",
+            "CNT_Phone": "={{ $(\"Receive Form Data\").item.json.body.phone }}",
+            "CNT_Country": "={{ $(\"Receive Form Data\").item.json.body.country }}",
+            "CNT_City": "={{ $(\"Receive Form Data\").item.json.body.city }}",
+            "CNT_LinkedIn": "={{ $(\"Receive Form Data\").item.json.body.linkedinUrl }}"
+          }
+        },
+        "options": {}
+      },
+      "id": "551eff74-3d9e-4a09-885f-b88402c61807",
+      "name": "Create Contact",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        688,
+        400
+      ],
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "oBf9Mi35QjkrgzTc",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "mode": "id",
+          "value": "appP8fZ7mxfVlSkyN"
+        },
+        "table": {
+          "__rl": true,
+          "mode": "id",
+          "value": "tbl5NL0veD0TwRc3j"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $(\"Receive Form Data\").item.json.body.company }}",
+            "ORG_Name": "={{ $(\"Receive Form Data\").item.json.body.company }}",
+            "ORG_Country": "={{ $(\"Receive Form Data\").item.json.body.country }}"
+          }
+        },
+        "options": {}
+      },
+      "id": "f4f19981-82d7-4872-b61c-176b592a247c",
+      "name": "Create Organization",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        912,
+        400
+      ],
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "oBf9Mi35QjkrgzTc",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $(\"Receive Form Data\").item.json.body.intakeType }}",
+                    "rightValue": "Capital Allocator",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $(\"Receive Form Data\").item.json.body.intakeType }}",
+                    "rightValue": "Asset Owner",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0b3747db-a0e1-44c5-9170-edda40552da4",
+      "name": "Route by Intake Type",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        1136,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "mode": "id",
+          "value": "appP8fZ7mxfVlSkyN"
+        },
+        "table": {
+          "__rl": true,
+          "mode": "id",
+          "value": "tbli1X5CYajMvMyHX"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $(\"Receive Form Data\").item.json.body.fullName }}",
+            "CA_Type": "={{ $(\"Receive Form Data\").item.json.body.allocatorType }}",
+            "CA_TicketMin": "={{ Number($(\"Receive Form Data\").item.json.body.minTicketSize) }}",
+            "CA_TicketMax": "={{ Number($(\"Receive Form Data\").item.json.body.maxTicketSize) }}",
+            "CA_Sectors": "={{ $(\"Receive Form Data\").item.json.body.targetSectors.join(\", \") }}",
+            "CA_Geography": "={{ $(\"Receive Form Data\").item.json.body.geographicFocus.join(\", \") }}",
+            "CA_Instrument": "={{ $(\"Receive Form Data\").item.json.body.preferredInstrument }}",
+            "CA_Risk": "={{ $(\"Receive Form Data\").item.json.body.riskAppetite }}",
+            "CA_Readiness": "={{ $(\"Receive Form Data\").item.json.body.deploymentReadiness }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "CA_Submission",
+              "displayName": "CA_Submission",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "CA_Type",
+              "displayName": "CA_Type",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Fund",
+                  "value": "Fund"
+                },
+                {
+                  "name": "Family Office",
+                  "value": "Family Office"
+                },
+                {
+                  "name": "Angel",
+                  "value": "Angel"
+                },
+                {
+                  "name": "Corporate",
+                  "value": "Corporate"
+                },
+                {
+                  "name": "DFI",
+                  "value": "DFI"
+                },
+                {
+                  "name": "Other",
+                  "value": "Other"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "CA_TicketMin",
+              "displayName": "CA_TicketMin",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "CA_TicketMax",
+              "displayName": "CA_TicketMax",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "CA_Sectors",
+              "displayName": "CA_Sectors",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "CA_Geography",
+              "displayName": "CA_Geography",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "CA_Instrument",
+              "displayName": "CA_Instrument",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Equity",
+                  "value": "Equity"
+                },
+                {
+                  "name": "Debt",
+                  "value": "Debt"
+                },
+                {
+                  "name": "Grant",
+                  "value": "Grant"
+                },
+                {
+                  "name": "Blended Finance",
+                  "value": "Blended Finance"
+                },
+                {
+                  "name": "Other",
+                  "value": "Other"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "CA_Risk",
+              "displayName": "CA_Risk",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Low",
+                  "value": "Low"
+                },
+                {
+                  "name": "Medium",
+                  "value": "Medium"
+                },
+                {
+                  "name": "High",
+                  "value": "High"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "CA_Readiness",
+              "displayName": "CA_Readiness",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Ready to Deploy",
+                  "value": "Ready to Deploy"
+                },
+                {
+                  "name": "Exploring",
+                  "value": "Exploring"
+                },
+                {
+                  "name": "Not Ready",
+                  "value": "Not Ready"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {
+          "typecast": true
+        }
+      },
+      "id": "0a3c5abb-c6af-42ad-aa4b-4a0697a55276",
+      "name": "Create Capital Allocator Profile",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        1360,
+        304
+      ],
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "oBf9Mi35QjkrgzTc",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "mode": "id",
+          "value": "appP8fZ7mxfVlSkyN"
+        },
+        "table": {
+          "__rl": true,
+          "mode": "id",
+          "value": "tblCU42xPeJUNSBbQ"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $(\"Receive Form Data\").item.json.body.fullName }}",
+            "AO_VentureName": "={{ $(\"Receive Form Data\").item.json.body.company }}",
+            "AO_Sector": "={{ $(\"Receive Form Data\").item.json.body.sector }}",
+            "AO_Revenue": "={{ $(\"Receive Form Data\").item.json.body.annualRevenue }}",
+            "AO_FundingSought": "={{ $(\"Receive Form Data\").item.json.body.fundingSought }}",
+            "AO_UseOfFunds": "={{ $(\"Receive Form Data\").item.json.body.intendedUseOfFunds }}",
+            "AO_Financials": "={{ $(\"Receive Form Data\").item.json.body.auditedRecords }}",
+            "AO_LegalDocs": "={{ $(\"Receive Form Data\").item.json.body.legalDocStatus }}",
+            "AO_Collateral": "={{ $(\"Receive Form Data\").item.json.body.collateral }}",
+            "AO_Offtake": "={{ $(\"Receive Form Data\").item.json.body.offtakeAgreements }}",
+            "AO_Readiness": "={{ $(\"Receive Form Data\").item.json.body.investmentReadiness }}"
+          }
+        },
+        "options": {
+          "typecast": true
+        }
+      },
+      "id": "6373fd67-5348-4828-8fe5-a945128df857",
+      "name": "Create Asset Owner Profile",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        1360,
+        496
+      ],
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "oBf9Mi35QjkrgzTc",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Receive Form Data": {
+      "main": [
+        [
+          {
+            "node": "Create Submission",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Submission": {
+      "main": [
+        [
+          {
+            "node": "Create Contact",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Contact": {
+      "main": [
+        [
+          {
+            "node": "Create Organization",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Organization": {
+      "main": [
+        [
+          {
+            "node": "Route by Intake Type",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route by Intake Type": {
+      "main": [
+        [
+          {
+            "node": "Create Capital Allocator Profile",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Create Asset Owner Profile",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "494c8314-a4e0-442f-8d96-bd039ca44434",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "5afca6cd4a8863eab46b5f5d9a8a741462ef8b3c05eacd20398d4ca6e93d5e8a"
+  },
+  "id": "Q32uYonHmFxNkPIY",
+  "tags": []
+}
