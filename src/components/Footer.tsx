@@ -37,10 +37,10 @@ const Footer = () => (
             Contact
           </span>
           <a
-            href="mailto:info@afi.africa"
+            href="mailto:TrustAFI@afi.africa"
             className="text-[12px] text-muted-foreground hover:text-foreground transition-colors"
           >
-            info@afi.africa
+            TrustAFI@afi.africa
           </a>
           <a
             href="tel:+2348119479657"
