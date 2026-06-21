@@ -16,7 +16,7 @@ const WhoWeServePage = () => (
           Two Sides of <span className="text-accent">Capital Certainty</span>
         </>
       }
-      subtitle="Asset owners seeking qualification. Investors seeking qualified signal."
+      subtitle="Asset owners seeking qualification. Allocators seeking qualified signal."
     />
 
     <section className="bg-background py-16">
