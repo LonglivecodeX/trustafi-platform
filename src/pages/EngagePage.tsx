@@ -93,7 +93,7 @@ const EngagePage = () => {
                     tab === "investor" ? "bg-accent text-accent-foreground" : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
-                  Investor
+                  Allocator
                 </button>
               </div>
             </div>
