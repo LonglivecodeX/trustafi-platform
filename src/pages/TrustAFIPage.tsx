@@ -58,7 +58,7 @@ const TrustAFIPage = () => (
               Submit for Qualification <ChevronRight size={14} />
             </Link>
             <Link to="/engage" className="inline-flex items-center gap-2 border border-border text-foreground font-medium px-6 py-3 rounded-md text-sm hover:border-accent hover:text-accent transition-all">
-              Request Investor Access
+              Request Allocator Access
             </Link>
           </div>
         </ScrollReveal>

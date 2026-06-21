@@ -48,7 +48,7 @@ const Index = () => (
                   to="/engage"
                   className="inline-flex items-center gap-2 border border-border text-foreground font-medium px-6 py-3 rounded-md text-sm hover:border-accent hover:text-accent transition-all"
                 >
-                  Investor Access
+                  Allocator Access
                 </Link>
               </div>
             </ScrollReveal>
@@ -141,7 +141,7 @@ const Index = () => (
             to="/engage"
             className="inline-flex items-center justify-center gap-2 border border-accent text-accent font-semibold px-8 py-4 rounded-md text-lg hover:bg-accent/10 transition-all"
           >
-            Investor Access
+            Allocator Access
           </Link>
         </div>
       </div>
@@ -208,7 +208,7 @@ const Index = () => (
           <ScrollReveal direction="right">
             <div className="bg-card p-8 md:p-10 h-full">
               <span className="text-muted-foreground text-[11px] font-semibold uppercase tracking-[0.2em]">
-                Investors
+                Allocators
               </span>
               <h2 className="font-serif text-2xl font-bold text-foreground mt-3">Access verified pipeline only.</h2>
               <p className="text-muted-foreground text-sm mt-3 leading-relaxed">

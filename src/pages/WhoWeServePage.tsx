@@ -16,7 +16,7 @@ const WhoWeServePage = () => (
           Two Sides of <span className="text-accent">Capital Certainty</span>
         </>
       }
-      subtitle="Asset owners seeking qualification. Investors seeking qualified signal."
+      subtitle="Asset owners seeking qualification. Allocators seeking qualified signal."
     />
 
     <section className="bg-background py-16">
@@ -53,7 +53,7 @@ const WhoWeServePage = () => (
 
           <ScrollReveal direction="right">
             <div className="bg-card p-8 md:p-10 h-full space-y-4">
-              <span className="text-accent text-[11px] font-semibold uppercase tracking-[0.2em]">Investors</span>
+              <span className="text-accent text-[11px] font-semibold uppercase tracking-[0.2em]">Allocators</span>
               <h2 className="font-serif text-2xl font-bold text-foreground">Access Verified Pipeline</h2>
               <ul className="space-y-2.5 text-muted-foreground text-sm">
                 <li className="flex items-center gap-2">
