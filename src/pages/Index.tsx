@@ -208,7 +208,7 @@ const Index = () => (
           <ScrollReveal direction="right">
             <div className="bg-card p-8 md:p-10 h-full">
               <span className="text-muted-foreground text-[11px] font-semibold uppercase tracking-[0.2em]">
-                Investors
+                Allocators
               </span>
               <h2 className="font-serif text-2xl font-bold text-foreground mt-3">Access verified pipeline only.</h2>
               <p className="text-muted-foreground text-sm mt-3 leading-relaxed">
