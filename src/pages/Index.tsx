@@ -141,7 +141,7 @@ const Index = () => (
             to="/engage"
             className="inline-flex items-center justify-center gap-2 border border-accent text-accent font-semibold px-8 py-4 rounded-md text-lg hover:bg-accent/10 transition-all"
           >
-            Investor Access
+            Allocator Access
           </Link>
         </div>
       </div>
