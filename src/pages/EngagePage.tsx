@@ -152,8 +152,13 @@ const EngagePage = () => {
                         <select name="sector" className={inputClass}>
                           <option value="">Select</option>
                           <option>Agriculture</option>
-                          <option>Manufacturing</option>
+                          <option>Energy</option>
+                          <option>Financial Services</option>
+                          <option>Healthcare</option>
+                          <option>Hospitality</option>
                           <option>Logistics</option>
+                          <option>Manufacturing</option>
+                          <option>Mining</option>
                           <option>Real Estate</option>
                           <option>Technology</option>
                         </select>
