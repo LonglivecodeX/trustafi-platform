@@ -102,6 +102,31 @@ const EngagePage = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal className="md:col-span-2" delay={100}>
               <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-8 space-y-4">
+                {/* Asset Owner: Understanding the Opportunity */}
+                {tab === "asset" && (
+                  <div className="space-y-4 pb-2">
+                    <div className="border-b border-border pb-2">
+                      <span className="text-accent text-[11px] font-semibold uppercase tracking-[0.2em]">Understanding the Opportunity</span>
+                    </div>
+                    <div>
+                      <label className={labelClass}>What outcome are you trying to achieve?</label>
+                      <textarea name="desiredOutcome" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe the outcome you are trying to achieve..." />
+                    </div>
+                    <div>
+                      <label className={labelClass}>What is currently preventing you from achieving that outcome? *</label>
+                      <textarea required name="currentObstacle" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe what is preventing you..." />
+                    </div>
+                    <div>
+                      <label className={labelClass}>What do you believe is the main reason that challenge exists? *</label>
+                      <textarea required name="rootCause" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe the main reason..." />
+                    </div>
+                    <div>
+                      <label className={labelClass}>What have you already done to try to solve this problem? *</label>
+                      <textarea required name="attemptedSolutions" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe what you have already tried..." />
+                    </div>
+                  </div>
+                )}
+
                 {/* Common fields */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
