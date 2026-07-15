@@ -127,6 +127,31 @@ const EngagePage = () => {
                   </div>
                 )}
 
+                {/* Allocator: Understanding Your Capital Allocation Process */}
+                {tab === "investor" && (
+                  <div className="space-y-4 pb-2">
+                    <div className="border-b border-border pb-2">
+                      <span className="text-accent text-[11px] font-semibold uppercase tracking-[0.2em]">Understanding Your Capital Allocation Process</span>
+                    </div>
+                    <div>
+                      <label className={labelClass}>What outcomes are you trying to achieve through your capital allocation activities? *</label>
+                      <textarea required name="allocationOutcomes" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe the outcomes you are trying to achieve..." />
+                    </div>
+                    <div>
+                      <label className={labelClass}>What currently makes it difficult to achieve those outcomes? *</label>
+                      <textarea required name="allocationObstacles" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe what makes it difficult..." />
+                    </div>
+                    <div>
+                      <label className={labelClass}>What do you believe is the main reason those challenges exist? *</label>
+                      <textarea required name="allocationRootCause" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe the main reason..." />
+                    </div>
+                    <div>
+                      <label className={labelClass}>What do you currently do to reduce uncertainty before making an investment decision? *</label>
+                      <textarea required name="uncertaintyReduction" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe your current approach..." />
+                    </div>
+                  </div>
+                )}
+
                 {/* Common fields */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
