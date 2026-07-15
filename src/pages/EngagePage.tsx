@@ -131,7 +131,7 @@ const EngagePage = () => {
                 {tab === "investor" && (
                   <div className="space-y-4 pb-2">
                     <div className="border-b border-border pb-2">
-                      <span className="text-accent text-[11px] font-semibold uppercase tracking-[0.2em]">Understanding Your Capital Allocation Process</span>
+                      <span className="text-accent text-[11px] font-semibold uppercase tracking-[0.2em]">Understanding Your Objective</span>
                     </div>
                     <div>
                       <label className={labelClass}>What outcomes are you trying to achieve through your capital allocation activities? *</label>
