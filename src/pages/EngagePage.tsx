@@ -109,8 +109,8 @@ const EngagePage = () => {
                       <span className="text-accent text-[11px] font-semibold uppercase tracking-[0.2em]">Understanding the Opportunity</span>
                     </div>
                     <div>
-                      <label className={labelClass}>What outcome are you trying to achieve?</label>
-                      <textarea name="desiredOutcome" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe the outcome you are trying to achieve..." />
+                      <label className={labelClass}>What outcome are you trying to achieve? *</label>
+                      <textarea required name="desiredOutcome" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe the outcome you are trying to achieve..." />
                     </div>
                     <div>
                       <label className={labelClass}>What is currently preventing you from achieving that outcome? *</label>
