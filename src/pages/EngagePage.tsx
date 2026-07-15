@@ -106,7 +106,7 @@ const EngagePage = () => {
                 {tab === "asset" && (
                   <div className="space-y-4 pb-2">
                     <div className="border-b border-border pb-2">
-                      <span className="text-accent text-[11px] font-semibold uppercase tracking-[0.2em]">Understanding the Opportunity</span>
+                      <span className="text-accent text-[11px] font-semibold uppercase tracking-[0.2em]">Understanding Your Objective</span>
                     </div>
                     <div>
                       <label className={labelClass}>What outcome are you trying to achieve? *</label>
