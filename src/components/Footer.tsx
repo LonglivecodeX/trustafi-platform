@@ -43,10 +43,10 @@ const Footer = () => (
             TrustAFI@afi.africa
           </a>
           <a
-            href="tel:+2348119479657"
+            href="tel:+2347032947554"
             className="text-[12px] text-muted-foreground hover:text-foreground transition-colors"
           >
-            +234 811 947 9657
+            +234 703 294 7554
           </a>
           <span className="text-[12px] text-muted-foreground leading-relaxed mt-1">
             Plot 16, Olabisi Villa,<br />
