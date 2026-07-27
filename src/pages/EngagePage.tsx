@@ -117,7 +117,7 @@ const EngagePage = () => {
                       <textarea required name="currentObstacle" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe what is preventing you..." />
                     </div>
                     <div>
-                      <label className={labelClass}>What do you believe is the main reason that challenge exists? *</label>
+                      <label className={labelClass}>What do you believe is the biggest factor contributing to this challenge? *</label>
                       <textarea required name="rootCause" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe the main reason..." />
                     </div>
                     <div>
@@ -142,7 +142,7 @@ const EngagePage = () => {
                       <textarea required name="allocationObstacles" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe what makes it difficult..." />
                     </div>
                     <div>
-                      <label className={labelClass}>What do you believe is the main reason those challenges exist? *</label>
+                      <label className={labelClass}>What do you believe is the biggest factor contributing to those challenges? *</label>
                       <textarea required name="allocationRootCause" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe the main reason..." />
                     </div>
                     <div>
