@@ -117,7 +117,7 @@ const EngagePage = () => {
                       <textarea required name="currentObstacle" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe what is preventing you..." />
                     </div>
                     <div>
-                      <label className={labelClass}>What do you believe is the biggest factor contributing to this challenge? *</label>
+                      <label className={labelClass}>What do you believe is causing this challenge? *</label>
                       <textarea required name="rootCause" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe the main reason..." />
                     </div>
                     <div>
@@ -134,7 +134,7 @@ const EngagePage = () => {
                       <span className="text-accent text-[11px] font-semibold uppercase tracking-[0.2em]">Understanding Your Objective</span>
                     </div>
                     <div>
-                      <label className={labelClass}>What outcomes are you trying to achieve through your capital allocation activities? *</label>
+                      <label className={labelClass}>What are you trying to achieve through your investments? *</label>
                       <textarea required name="allocationOutcomes" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe the outcomes you are trying to achieve..." />
                     </div>
                     <div>
@@ -142,7 +142,7 @@ const EngagePage = () => {
                       <textarea required name="allocationObstacles" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe what makes it difficult..." />
                     </div>
                     <div>
-                      <label className={labelClass}>What do you believe is the biggest factor contributing to those challenges? *</label>
+                      <label className={labelClass}>What do you believe is causing those challenges? *</label>
                       <textarea required name="allocationRootCause" className={`${inputClass} min-h-[80px] resize-y`} placeholder="Describe the main reason..." />
                     </div>
                     <div>
