@@ -50,7 +50,7 @@ const Footer = () => (
           </a>
           <span className="text-[12px] text-muted-foreground leading-relaxed mt-1">
             Plot 16, Olabisi Villa,<br />
-            Water Corporation Road,<br />
+            Water Corporation Drive,<br />
             Victoria Island, Lagos
           </span>
         </div>
